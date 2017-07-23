@@ -16,6 +16,10 @@ export class TutorialComponent {
   @Input() name: string;
   @Output() onVote = new EventEmitter<boolean>();
 
+  setName = (name: string) => {
+    this.name = name
+  }
+
   vote = (agree) => {
     this.voted = true;
     this.onVote.emit(agree)
