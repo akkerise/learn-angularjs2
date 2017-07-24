@@ -19,15 +19,14 @@ export class AppComponent {
   public names = ['Mr A', 'Mr B', 'Mr C', 'Mr D'];
 
   @ViewChild(TutorialComponent)
-  private tutorialComponent = TutorialComponent;
+  private tutorialComponent: TutorialComponent;
 
   public parentVote = (agree: boolean) => {
     if (agree) this.agree++;
     else this.disgree++
   }
 
-  changeName(){
-    // this.tutorialComponent.setName('This is data parent component data')
-    alert('clgt')
+  changeName() {
+    this.tutorialComponent.setName('This is data parent component data')
   }
 }
