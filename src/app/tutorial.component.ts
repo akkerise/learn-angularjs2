@@ -1,15 +1,27 @@
-import {Component} from '@angular/core'
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-tutorial',
   template: `
-    <h1>Hello {{title | uppercase}}</h1>
-    <p>Today is : {{today | date:'time'}}</p>
-    <p>{{ 2 | customPipe}}</p>
+    <p>Child component: {{name}}</p>
+    <button [disabled]="voted" (click)="vote(true)">Agree</button>
+    <button [disabled]="voted" (click)="vote(false)">Disgree</button>
+    Result: {{voted}}
   `
 })
 
 export class TutorialComponent {
-  public title: string = 'Thanh';
-  public today = Date.now();
+  public voted: boolean = false;
+
+  @Input() name: string;
+  @Output() onVote = new EventEmitter<boolean>();
+
+  setName = (name: string) => {
+    this.name = name
+  }
+
+  vote = (agree) => {
+    this.voted = true;
+    this.onVote.emit(agree)
+  }
 }
