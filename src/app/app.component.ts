@@ -14,20 +14,16 @@ import {TutorialComponent} from "./tutorial.component"
   `,
 })
 export class AppComponent {
-  public agree: number = 0;
-  public disgree: number = 0;
   public names = ['Mr A', 'Mr B', 'Mr C', 'Mr D'];
 
   @ViewChild(TutorialComponent)
   private tutorialComponent = TutorialComponent;
 
   public parentVote = (agree: boolean) => {
-    if (agree) this.agree++;
-    else this.disgree++
   }
 
   changeName(){
-    // this.tutorialComponent.setName('This is data parent component data')
-    this.tutorialComponent.name
+    this.tutorialComponent.setName('This is data parent component data')
+    // this.tutorialComponent.name
   }
 }
