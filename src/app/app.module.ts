@@ -4,6 +4,7 @@ import {AppComponent} from './app.component';
 import {FormsModule} from "@angular/forms";
 import {EmployeeComponent} from "./employee.component"
 import {EmployeeService} from "./services/employee.service";
+import {HttpModule} from "@angular/http"
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {EmployeeService} from "./services/employee.service";
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
