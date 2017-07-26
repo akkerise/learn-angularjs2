@@ -2,19 +2,31 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {FormsModule} from "@angular/forms";
-import {EmployeeComponent} from "./employee.component"
+import {EmployeeListComponent} from "./employee.component"
 import {EmployeeService} from "./services/employee.service";
-import {HttpModule} from "@angular/http"
+import {HttpModule} from "@angular/http";
+import {HomeComponent} from './home.component'
+import {appRoutes} from './app.routes';
+import { FooterComponent } from './footer/footer.component';
+import { FooterTopComponent } from './footer/footer-top/footer-top.component';
+import { FooterMidComponent } from './footer/footer-mid/footer-mid.component';
+import { FooterBotComponent } from './footer/footer-bot/footer-bot.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent
+    EmployeeListComponent,
+    HomeComponent,
+    FooterComponent,
+    FooterTopComponent,
+    FooterMidComponent,
+    FooterBotComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    appRoutes
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
