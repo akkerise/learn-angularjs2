@@ -10,7 +10,8 @@ import {appRoutes} from './app.routes';
 import { FooterComponent } from './footer/footer.component';
 import { FooterTopComponent } from './footer/footer-top/footer-top.component';
 import { FooterMidComponent } from './footer/footer-mid/footer-mid.component';
-import { FooterBotComponent } from './footer/footer-bot/footer-bot.component'
+import { FooterBotComponent } from './footer/footer-bot/footer-bot.component';
+import { NotfoundComponent } from './notfound/notfound.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterBotComponent } from './footer/footer-bot/footer-bot.component'
     FooterComponent,
     FooterTopComponent,
     FooterMidComponent,
-    FooterBotComponent
+    FooterBotComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
