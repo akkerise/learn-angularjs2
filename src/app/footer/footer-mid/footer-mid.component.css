@@ -1,0 +1,14 @@
+
+div {
+  border-top: 1px solid green;
+  border-bottom: 1px solid greenyellow;
+  box-sizing: border-box;
+}
+
+.col-xs-4 {
+  padding-right: 15px;
+}
+
+.col-xs-8 {
+
+}
