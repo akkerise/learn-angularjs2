@@ -11,6 +11,7 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 })
 
 export class TutorialComponent {
+
   public voted: boolean = false;
 
   @Input() name: string;
@@ -24,4 +25,5 @@ export class TutorialComponent {
     this.voted = true;
     this.onVote.emit(agree)
   }
+
 }
