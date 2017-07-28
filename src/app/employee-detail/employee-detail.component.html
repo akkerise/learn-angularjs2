@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <td>Id:</td>
+    <td>{{employee===null ? '' : employee.id}}</td>
+  </tr>
+  <tr>
+    <td>Name:</td>
+    <td>{{employee===null ? '' : employee.name}}</td>
+  </tr>
+  <tr>
+    <td>Age:</td>
+    <td>{{employee===null ? '' : employee.age}}</td>
+  </tr>
+  <tr>
+    <td>Status:</td>
+    <td>{{employee===null ? '' : employee.status}}</td>
+  </tr>
+</table>
+<a class="btn btn-primary" [routerLink]="['overview']">Overview</a>
+<a class="btn btn-default" [routerLink]="['projects']">Project</a>
+<a class="btn btn-default" [routerLink]="['/employees']">Back Employees List</a>
+<router-outlet></router-outlet>

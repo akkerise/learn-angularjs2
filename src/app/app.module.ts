@@ -7,11 +7,14 @@ import {EmployeeService} from "./services/employee.service";
 import {HttpModule} from "@angular/http";
 import {HomeComponent} from './home.component'
 import {appRoutes} from './app.routes';
-import { FooterComponent } from './footer/footer.component';
-import { FooterTopComponent } from './footer/footer-top/footer-top.component';
-import { FooterMidComponent } from './footer/footer-mid/footer-mid.component';
-import { FooterBotComponent } from './footer/footer-bot/footer-bot.component';
-import { NotfoundComponent } from './notfound/notfound.component'
+import {FooterComponent} from './footer/footer.component';
+import {FooterTopComponent} from './footer/footer-top/footer-top.component';
+import {FooterMidComponent} from './footer/footer-mid/footer-mid.component';
+import {FooterBotComponent} from './footer/footer-bot/footer-bot.component';
+import {NotfoundComponent} from './notfound/notfound.component';
+import {EmployeeDetailComponent} from './employee-detail/employee-detail.component';
+import {EmployeeOverviewComponent} from './employee-overview/employee-overview.component';
+import {EmployeeProjectsComponent} from './employee-projects/employee-projects.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { NotfoundComponent } from './notfound/notfound.component'
     FooterTopComponent,
     FooterMidComponent,
     FooterBotComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    EmployeeOverviewComponent,
+    EmployeeProjectsComponent,
+    EmployeeDetailComponent,
   ],
   imports: [
     BrowserModule,
