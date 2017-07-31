@@ -1,0 +1,19 @@
+<form class="form-horizontal" #f="ngForm" method="post" (ngSubmit)="Login(f.value)">
+  <div class="form-group">
+    <label for="" class="col-md-2">Username</label>
+    <div class="col-md-10">
+      <input type="text" name="username" class="form-control" ngModel>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-md-2">Password</label>
+    <div class="col-md-10">
+      <input type="password" name="password" class="form-control" ngModel>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-md-10">
+      <button class="btn btn-default" type="submit">Login</button>
+    </div>
+  </div>
+</form>

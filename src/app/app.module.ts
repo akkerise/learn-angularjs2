@@ -14,7 +14,14 @@ import {FooterBotComponent} from './footer/footer-bot/footer-bot.component';
 import {NotfoundComponent} from './notfound/notfound.component';
 import {EmployeeDetailComponent} from './employee-detail/employee-detail.component';
 import {EmployeeOverviewComponent} from './employee-overview/employee-overview.component';
-import {EmployeeProjectsComponent} from './employee-projects/employee-projects.component'
+import {EmployeeProjectsComponent} from './employee-projects/employee-projects.component';
+import {LoginComponent} from './login/login.component'
+import {LoginService} from "./services/login.service"
+import {CheckLoginGuard} from "../guards/check-login.guard"
+import {CheckSaveFormGuard} from "./services/check-save-form.guard";
+import {EmployeeEditComponent} from './employee-edit/employee-edit.component';
+import {EmployeeAddComponent} from './employee-add/employee-add.component';
+import {RecyleService} from "./services/recyle.service";
 
 @NgModule({
   declarations: [
@@ -29,6 +36,9 @@ import {EmployeeProjectsComponent} from './employee-projects/employee-projects.c
     EmployeeOverviewComponent,
     EmployeeProjectsComponent,
     EmployeeDetailComponent,
+    LoginComponent,
+    EmployeeEditComponent,
+    EmployeeAddComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +46,13 @@ import {EmployeeProjectsComponent} from './employee-projects/employee-projects.c
     HttpModule,
     appRoutes
   ],
-  providers: [EmployeeService],
+  providers: [
+    EmployeeService,
+    LoginService,
+    CheckLoginGuard,
+    CheckSaveFormGuard,
+    RecyleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,3 +1,14 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-4">
+      <input type="text" [(ngModel)]="keyword" name="keyword" (keydown)="HandleKeyDown($event)">
+      <button type="submit" (click)="Search(keyword)">Search</button>
+    </div>
+  </div>
+</div>
+<div class="row center">
+  <a type="submit" [routerLink]="['/employee-add']">Add New</a>
+</div>
 <table class="table">
   <thead>
   <tr>
@@ -16,8 +27,31 @@
     <td>{{employee.age}}</td>
     <td>{{employee.status}}</td>
     <td>
-      <a [routerLink]="['/employee-detail', employee.id ]">Show Detail</a>
+      <a [routerLink]="['/employee-detail', employee.id ]" class="btn btn-primary">Show Detail</a>
+      <a [routerLink]="['/employee-edit', employee.id ]" class="btn btn-warning">Edit</a>
+      <a (click)="Delete(employee.id)" class="btn btn-danger">Delete</a>
     </td>
   </tr>
   </tbody>
 </table>
+Next
+Copy
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item" *ngFor="let page of pages">
+      <a class="page-link" [routerLink]="['/employees']" [queryParams]="{pageNumber:page,clgt:['c','d']}">{{page}}</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
