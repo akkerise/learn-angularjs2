@@ -17,7 +17,7 @@ export class AppComponent {
   public names = ['Mr A', 'Mr B', 'Mr C', 'Mr D'];
 
   @ViewChild(TutorialComponent)
-  private tutorialComponent = TutorialComponent;
+  private tutorialComponent: TutorialComponent;
 
   public parentVote = (agree: boolean) => {
   }
